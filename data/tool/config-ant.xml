@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project name="release" basedir="C:/xampp/htdocs/bin/xhgz" default="build">
+    <!-- 设置变量 -->
+    <property name="FLEX_HOME" value="C:/Program Files (x86)/Adobe/Adobe Flash Builder 4.6/sdks/4.6.0"/>
+    <property name="SOURCE_DIR" value="${basedir}/src"/>
+    <property name="LIB_PATH" value="${basedir}/libs"/>
+    <property name="DEPLOY_DIR" value="${basedir}/bin-release"/>
+
+    <taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
+
+    <!-- 按顺序执行各个任务 -->  
+    <target name="build">    
+        <antcall target="clean"/>  
+        <antcall target="compile">
+            <!-- 这里的 Main 为项目主入口类名 -->
+            <param name="projectName" value="game_loading_do"/>  
+            <param name="projectName2" value="game_main"/> 
+        </antcall>
+        <!--<antcall target="res_handle"/>-->
+        <echo>完成</echo>
+    </target>  
+
+
+    <!--清理-->
+    <target name="clean">
+        <echo>清理</echo>
+        <delete includeemptydirs="true">  
+            <fileset dir="${DEPLOY_DIR}" includes="**/*"/>  
+        </delete>
+    </target>
+
+    <!--编译SWF-->  
+    <target name="compile">
+        <echo>编译</echo>
+        <mxmlc  
+            file="${SOURCE_DIR}/main/${projectName}.as"  
+            output="${DEPLOY_DIR}/${projectName}.swf"  
+            static-rsls="true"  
+            accessible="true" 
+            use-network="true" 
+            debug="false">
+            <compiler.library-path dir="${FLEX_HOME}/frameworks" append="true">
+                <include name="libs" />
+                <include name="libs/mx" />
+                <include name="locale/{locale}" />
+                <include name="libs/player" />
+            </compiler.library-path>
+            <compiler.library-path dir="${LIB_PATH}" append="true">
+                <include name="ARayLib.swc" />
+                <include name="Astar.swc" />
+                <include name="JPGLoader.swc" />
+                <include name="monsterdebug.swc" />
+                <include name="sm.swc" />
+                <include name="starling.swc" />
+                <include name="tweenlite.swc" />
+                <include name="xh_engine.swc" />
+                <include name="xhui.swc" />
+            </compiler.library-path>
+            <compiler.source-path path-element="${SOURCE_DIR}"/>
+            <!-- 设置条件编译配置 -->
+            <define name="CONFIG::debug" value="false"/>
+            <define name="CONFIG::release" value="true"/>
+        </mxmlc>  
+		<mxmlc  
+            file="${SOURCE_DIR}/main/${projectName2}.as"  
+            output="${DEPLOY_DIR}/${projectName2}.swf"  
+            static-rsls="true"  
+            accessible="true" 
+            use-network="true" 
+            debug="false">
+            <compiler.library-path dir="${FLEX_HOME}/frameworks" append="true">
+                <include name="libs" />
+                <include name="libs/mx" />
+                <include name="locale/{locale}" />
+                <include name="libs/player" />
+            </compiler.library-path>
+            <compiler.library-path dir="${LIB_PATH}" append="true">
+                <include name="ARayLib.swc" />
+                <include name="Astar.swc" />
+                <include name="JPGLoader.swc" />
+                <include name="monsterdebug.swc" />
+                <include name="sm.swc" />
+                <include name="starling.swc" />
+                <include name="tweenlite.swc" />
+                <include name="xh_engine.swc" />
+                <include name="xhui.swc" />
+            </compiler.library-path>
+            <compiler.source-path path-element="${SOURCE_DIR}"/>
+            <!-- 设置条件编译配置 -->
+            <define name="CONFIG::debug" value="false"/>
+            <define name="CONFIG::release" value="true"/>
+        </mxmlc>  
+    </target>
+
+    <!--资源文件处理-->
+<!--    <target name="res_handle">
+        <echo>资源文件处理</echo>
+        <copy includeEmptyDirs="true" todir="${DEPLOY_DIR}">
+            <fileset dir="${basedir}/src">
+                <include name="assets/**"/>
+            </fileset>
+        </copy>
+        <delete includeemptydirs="true">  
+            <fileset dir="${DEPLOY_DIR}/assets">
+                <include name="*.txt"/>
+                <include name="*.fla"/>
+            </fileset>          
+        </delete>
+    </target>
+-->
+</project>

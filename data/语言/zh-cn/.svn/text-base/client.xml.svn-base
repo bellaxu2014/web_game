@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+	<!--加载相关-->
+	<lang id="load_load_game" value="欢迎来到天劫，正在为您加载，请稍后..."/>
+	<lang id="load_first_state" value="如果您是第一次打开游戏，加载可能较慢，请耐心等待"/>
+	<lang id="load_game_state" value="抵制不良游戏    拒绝盗版游戏    注意自我保护    谨防上当受骗    适度游戏益脑    沉迷游戏伤身    合理安排时间    享受健康生活"/>
+	<lang id="load_cur_percent" value="进度："/>
+	<lang id="load_cur_load" value="正在载入："/>
+	<lang id="load_enter_scene" value="正在进入场景，请稍后..."/>
+	<lang id="load_cannot_handle" value="无法处理"/>
+	<lang id="load_cannot_load" value="无法加载"/>
+	<!--通讯相关-->
+	<lang id="connect_success" value="连接成功"/>
+	<lang id="connect_failed" value="连接失败"/>
+	<!--皮肤相关-->
+	<lang id="BXLabel_default" value="标签"/>
+	<lang id="BXButton_default" value="确定"/>
+	<!--游戏基本-->
+	<lang id="game_name" value="天劫"/>
+	<lang id="metier_1" value="猛将"/>
+	<lang id="metier_2" value="谋士"/>
+	<lang id="metier_3" value="箭手"/>
+	<lang id="sex_1" value="男"/>
+	<lang id="sex_2" value="女"/>
+	<!--数值单位-->
+	<lang id="uint_level" value="级"/>
+	<lang id="uint_item" value="个"/>
+	<lang id="uint_time_s" value="秒"/>
+	<!--悬浮-->
+	<lang id="tip_item_type" value="类型："/>
+	<lang id="tip_item_need_lv" value="需要等级："/>
+	<lang id="tip_item_sell_price" value="售价："/>
+	<lang id="tip_item_send" value="&lt;Ctrl+单击左键发送到聊天&gt;"/>
+	<lang id="tip_skill_lv" value="等级："/>
+	<lang id="tip_skill_cur_lv" value="当前等级："/>
+	<lang id="tip_skill_mp_cost" value="法力消耗："/>
+	<lang id="tip_skill_cast_dis" value="施法距离："/>
+	<lang id="tip_skill_cd_time" value="冷却时间："/>
+	<lang id="tip_skill_next_lv" value="下一等级："/>
+	<lang id="tip_skill_learn_lv" value="学习等级："/>
+	<lang id="tip_skill_condition" value="前置技能："/>
+	<lang id="tip_skill_need" value="需求："/>
+	<lang id="tip_equip_pos" value="类别："/>
+	<lang id="tip_equip_lv" value="等级："/>
+	<lang id="tip_equip_quality" value="品质："/>
+	<lang id="tip_equip_quality_unknown" value="未知"/>
+	<lang id="tip_equip_att_basic" value="基础属性："/>
+	<lang id="tip_equip_att_gem" value="宝石镶嵌："/>
+	<lang id="tip_equip_strength" value="强化"/>
+	<lang id="tip_equip_dura" value="耐久度："/>
+	<lang id="tip_equip_not_identify" value="未鉴定"/>
+	<lang id="tip_equip_add_skill" value="附加特技："/>
+	<lang id="tip_equip_sort_no_active" value="未激活"/>
+	<!--提示-->
+	<lang id="item_not_equip" value="普通物品不能装备"/>
+	<lang id="item_equip_not_pos" value="装备位置不对"/>
+	<lang id="item_not_quick" value="物品不能快捷使用"/>
+	<lang id="item_equip_not_replace" value="只能更换同类型的装备"/>
+</xml>

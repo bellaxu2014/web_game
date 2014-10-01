@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>client</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>语言</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/data/%E8%AF%AD%E8%A8%80</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>

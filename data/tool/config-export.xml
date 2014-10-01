@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+	<data excel='../数值/J.技能表.xlsx' name='技能表' unique='true' export='Pub_skill'/>
+	<data excel='../数值/J.技能表.xlsx' name='技能等级' unique='false' export='Pub_skillLv'/>
+	<data excel='../数值/S.属性定义.xlsx' name='属性定义' unique='true' export='Pub_property'/>
+	<data excel='../数值/W.物品表.xlsx' name='物品表' unique='true' export='Pub_item'/>
+	<data excel='../数值/W.物品表.xlsx' name='物品类型' unique='true' export='Pub_itemType'/>
+	<data excel='../数值/W.物品表.xlsx' name='物品位置' unique='true' export='Pub_itemPos'/>
+	<data excel='../数值/W.物品表.xlsx' name='物品品质' unique='true' export='Pub_itemQuality'/>
+	<data excel='../数值/W.物品表.xlsx' name='价格类型' unique='true' export='Pub_priceType'/>
+	<data excel='../数值/Z.装备表.xlsx' name='套装表' unique='true' export='Pub_equipSort'/>
+	<data excel='../数值/Z.装备表.xlsx' name='装备强化' unique='false' export='Pub_equipStrength'/>
+</xml>

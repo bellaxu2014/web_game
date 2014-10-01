@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+	<packet id="10000" name="Login" desc="登陆">
+		<cs>
+			<param name="username" type="String"/>
+			<param name="password" type="String"/>
+		</cs>
+		<sc>
+			<param name="username" type="String"/>
+			<param name="password" type="String"/>
+		</sc>
+	</packet>
+</xml>

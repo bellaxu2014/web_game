@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<actionScriptProperties analytics="false" mainApplicationPath="tool.mxml" projectUUID="c8be26ca-3828-4314-82a5-aa84d6f46f4d" version="11">
+  <compiler additionalCompilerArguments="-locale en_US" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="false" htmlHistoryManagement="false" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" removeUnusedRSL="true" sourceFolderPath="src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="true" useDebugRSLSwfs="true" useFlashSDK="false" verifyDigests="true" warn="true">
+    <compilerSourcePath>
+      <compilerSourcePathEntry kind="1" linkType="1" path="/Users/BellaXu/Documents/game/web_game/client/src"/>
+    </compilerSourcePath>
+    <libraryPath defaultLinkType="0">
+      <libraryPathEntry kind="4" path="">
+        <excludedEntries>
+          <libraryPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/libs/flex.swc" useDefaultLinkType="false"/>
+          <libraryPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/libs/core.swc" useDefaultLinkType="false"/>
+        </excludedEntries>
+      </libraryPathEntry>
+      <libraryPathEntry kind="1" linkType="1" path="libs"/>
+      <libraryPathEntry kind="1" linkType="1" path="/Users/BellaXu/Documents/game/web_game/client/lib"/>
+    </libraryPath>
+    <sourceAttachmentPath/>
+  </compiler>
+  <applications>
+    <application path="tool.mxml">
+      <airExcludes/>
+    </application>
+  </applications>
+  <modules/>
+  <workers/>
+  <buildCSSFiles/>
+  <flashCatalyst validateFlashCatalystCompatibility="false"/>
+  <buildTargets>
+    <buildTarget buildTargetName="default" platformId="default">
+      <airSettings airCertificatePath="" airTimestamp="true" anePathSet="true" version="1">
+        <airExcludes/>
+        <anePaths/>
+        <newLaunchParams/>
+        <modifiedLaunchParams/>
+        <newPackagingParams/>
+        <modifiedPackagingParams/>
+      </airSettings>
+      <actionScriptSettings version="1"/>
+    </buildTarget>
+  </buildTargets>
+</actionScriptProperties>

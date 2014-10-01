@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*" width="1200" height="576" xmlns:display="com.bellaxu.display.*" addedToStage="onAddedToStage(event)">
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import com.bellaxu.res.ResPath;
+			import com.bellaxu.skin.BXButton;
+			import com.bellaxu.skin.BXCheckBox;
+			import com.bellaxu.skin.BXComboBox;
+			import com.bellaxu.skin.BXDataLineList;
+			import com.bellaxu.skin.BXDisplayObjectContainer;
+			import com.bellaxu.skin.BXFolderContainer;
+			import com.bellaxu.skin.BXImage;
+			import com.bellaxu.skin.BXImageButton;
+			import com.bellaxu.skin.BXLabel;
+			import com.bellaxu.skin.BXLine;
+			import com.bellaxu.skin.BXMovie;
+			import com.bellaxu.skin.BXNumberInput;
+			import com.bellaxu.skin.BXPage;
+			import com.bellaxu.skin.BXPanel;
+			import com.bellaxu.skin.BXProgressbar;
+			import com.bellaxu.skin.BXRadioButtonGroup;
+			import com.bellaxu.skin.BXSimplePage;
+			import com.bellaxu.skin.BXSlider;
+			import com.bellaxu.skin.BXTabbar;
+			import com.bellaxu.skin.BXTextArea;
+			import com.bellaxu.skin.BXTextInput;
+			import com.bellaxu.skin.BXTitle;
+			import com.bellaxu.skin.BXTree;
+			import com.bellaxu.skin.BXWindow;
+			
+			import mx.core.UIComponent;
+			
+			import display.BXUIComponent;
+			
+			import game.core.GameConf;
+			import game.core.GameFrame;
+			import game.core.GameResLoader;
+			import game.core.GameResize;
+			
+			[Embed(source="icons.swf", mimeType = "application/octet-stream")]
+			private var _embedCls:Class;
+			
+			private function onAddedToStage(event:Event):void
+			{
+				stage.frameRate = GameConf.FPS;
+				GameConf.cdnPath = "/Users/BellaXu/Documents/game/web_game/client/bin-debug/res/";
+				GameConf.stage = stage;
+				GameFrame.regist(stage);
+				GameResize.regist(stage);
+				
+				var contenxt:LoaderContext = new LoaderContext();
+				contenxt.allowCodeImport = true;
+				contenxt.applicationDomain = ApplicationDomain.currentDomain;
+				var loader:Loader = new Loader();
+				loader.contentLoaderInfo.addEventListener(Event.COMPLETE, onLoaded);
+				loader.loadBytes(new _embedCls(), contenxt);
+			}
+			
+			private function onLoaded(e:Event):void
+			{
+				var vec:Vector.<String> = new <String>[
+					ResPath.SKIN_BASIC,
+					ResPath.SKIN_EXTEND
+				];
+				GameResLoader.load(onLoadedSkin, null);
+			}
+			
+			private var _loadedNum:int;
+			
+			private function onLoadedSkin(url:String):void
+			{
+				switch(url)
+				{
+					case ResPath.SKIN_BASIC:
+						//添加组件至列表
+						basicSkin.addElement(new BXUIComponent("BXLabel", "标签", BXLabel));
+						basicSkin.addElement(new BXUIComponent("BXTextInput", "输入框", BXTextInput));
+						basicSkin.addElement(new BXUIComponent("BXTextArea", "文本框", BXTextArea));
+						basicSkin.addElement(new BXUIComponent("BXButton1", "按钮1", BXButton));
+						basicSkin.addElement(new BXUIComponent("BXButton2", "按钮2", BXButton));
+						basicSkin.addElement(new BXUIComponent("BXButton3", "按钮3", BXButton));
+						basicSkin.addElement(new BXUIComponent("BXButton4", "按钮4", BXButton));
+						basicSkin.addElement(new BXUIComponent("BXButton5", "按钮5", BXButton));
+						basicSkin.addElement(new BXUIComponent("BXButton6", "按钮6", BXButton));
+						basicSkin.addElement(new BXUIComponent("BXButton7", "按钮7", BXButton));
+						basicSkin.addElement(new BXUIComponent("BXButton8", "按钮8", BXButton));
+						basicSkin.addElement(new BXUIComponent("BXButton9", "按钮9", BXButton));
+						basicSkin.addElement(new BXUIComponent("BXImage", "图片", BXImage));
+						basicSkin.addElement(new BXUIComponent("BXMovie", "动画", BXMovie));
+						basicSkin.addElement(new BXUIComponent("BXImageButton", "图片按钮", BXImageButton));
+						basicSkin.addElement(new BXUIComponent("BXCheckBox1", "选择框", BXCheckBox));
+						basicSkin.addElement(new BXUIComponent("BXComboBox1", "列表框", BXComboBox));
+						basicSkin.addElement(new BXUIComponent("BXRadioButtonGroup", "单选组合", BXRadioButtonGroup));
+						basicSkin.addElement(new BXUIComponent("BXDataLineList", "数据行", BXDataLineList));
+						basicSkin.addElement(new BXUIComponent("BXNumberInput", "数量框", BXNumberInput));
+						basicSkin.addElement(new BXUIComponent("BXPage", "翻页", BXPage));
+						basicSkin.addElement(new BXUIComponent("BXSimplePage", "简单翻页", BXSimplePage));
+						basicSkin.addElement(new BXUIComponent("BXLine1", "分隔线", BXLine));
+						basicSkin.addElement(new BXUIComponent("BXTitle", "标题栏", BXTitle));
+						basicSkin.addElement(new BXUIComponent("BXSlider", "滑动条", BXSlider));
+						basicSkin.addElement(new BXUIComponent("BXProgressbar", "进度条", BXProgressbar));
+						basicSkin.addElement(new BXUIComponent("BXTree", "树型结构", BXTree));
+						basicSkin.addElement(new BXUIComponent("BXTabbar", "导航条", BXTabbar));
+						basicSkin.addElement(new BXUIComponent("BXPanel", "面板", BXPanel));
+						basicSkin.addElement(new BXUIComponent("BXDisplayObjectContainer", "容器", BXDisplayObjectContainer));
+						basicSkin.addElement(new BXUIComponent("BXFolderContainer", "折叠容器", BXFolderContainer));
+						basicSkin.addElement(new BXUIComponent("BXWindow", "窗体", BXWindow));
+						basicSkin.addElement(new UIComponent());
+						break;
+					case ResPath.SKIN_EXTEND:
+						break;
+				}
+			}
+		]]>
+	</fx:Script>
+	<mx:TabNavigator width="100%" height="100%">
+		<s:NavigatorContent width="100%" height="100%" label="界面编辑器">
+			<s:HGroup width="100%" height="100%">
+				<mx:Accordion x="698" y="178" width="200" height="100%">
+					<s:NavigatorContent width="100%" height="100%" label="基础组件">
+						<s:VGroup id="basicSkin" clipAndEnableScrolling="true" x="32" y="4" width="100%" height="100%" gap="32">
+						</s:VGroup>
+						<s:VScrollBar id="basicScroll" viewport="{basicSkin}" x="183" height="{basicSkin.y + basicSkin.height}"/>
+					</s:NavigatorContent>
+					<s:NavigatorContent width="100%" height="100%" label="扩展组件">
+						<s:VGroup id="extendSkin" clipAndEnableScrolling="true" x="32" y="4" width="100%" height="100%" gap="32">
+						</s:VGroup>
+						<s:VScrollBar id="extendScroll" viewport="{extendSkin}" x="183" height="{basicSkin.y + extendSkin.height}"/>
+					</s:NavigatorContent>
+					<s:NavigatorContent width="100%" height="100%" label="自定义组件">
+						<s:VGroup id="customSkin" clipAndEnableScrolling="true" x="32" y="4" width="100%" height="100%" gap="32">
+						</s:VGroup>
+						<s:VScrollBar id="customScroll" viewport="{customSkin}" x="183" height="{customSkin.y + customSkin.height}"/>
+					</s:NavigatorContent>
+				</mx:Accordion>
+				<s:BorderContainer width="100%" height="100%">
+				</s:BorderContainer>
+				<mx:TabNavigator width="280" height="100%">
+					<s:NavigatorContent width="100%" height="100%" label="基本属性">
+					</s:NavigatorContent>
+				</mx:TabNavigator>
+			</s:HGroup>
+		</s:NavigatorContent>
+		<s:NavigatorContent width="100%" height="100%" label="地图编辑器">
+		</s:NavigatorContent>
+		<s:NavigatorContent width="100%" height="100%" label="资源编辑器">
+		</s:NavigatorContent>
+	</mx:TabNavigator>
+</s:WindowedApplication>
